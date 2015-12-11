@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Ww-5E-Aw2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--带边框的label-->
+        <scene sceneID="yOo-m7-Ely">
+            <objects>
+                <tableViewController id="kMt-oq-7Sp" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a5q-6x-jCx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" id="Y6c-ga-J0B" customClass="TableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y6c-ga-J0B" id="Tdu-08-ehM">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" restorationIdentifier="mycell" translatesAutoresizingMaskIntoConstraints="NO" id="in5-7C-MBd" customClass="WbLabel">
+                                            <rect key="frame" x="5" y="5" width="310" height="34"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.42352941179999998" green="0.81960784310000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="in5-7C-MBd" firstAttribute="top" secondItem="Tdu-08-ehM" secondAttribute="top" constant="5" id="9tI-0M-o3o"/>
+                                        <constraint firstAttribute="trailing" secondItem="in5-7C-MBd" secondAttribute="trailing" constant="5" id="MER-b5-3Ag"/>
+                                        <constraint firstAttribute="bottom" secondItem="in5-7C-MBd" secondAttribute="bottom" constant="5" id="UOS-6M-F8R"/>
+                                        <constraint firstItem="in5-7C-MBd" firstAttribute="leading" secondItem="Tdu-08-ehM" secondAttribute="leading" constant="5" id="cSK-yc-dfm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="TestVbLabel" destination="in5-7C-MBd" id="HnF-qy-A0M"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kMt-oq-7Sp" id="op2-w8-51L"/>
+                            <outlet property="delegate" destination="kMt-oq-7Sp" id="ToK-Ci-Yo7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="带边框的label" id="Gyu-F8-wW3"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4VS-qz-Gh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="627" y="365"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aRy-oQ-Dx2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Ww-5E-Aw2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5xf-mS-rUp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kMt-oq-7Sp" kind="relationship" relationship="rootViewController" id="Ny9-mB-94z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xe3-Fg-iUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69" y="374"/>
+        </scene>
+    </scenes>
+</document>
